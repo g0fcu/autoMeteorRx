@@ -1,7 +1,8 @@
 # v1.0 Meteor M-N2 automatic pass recording
-# Written by Simon Kennedy, G0FCU, April 2015
+# Written by Simon Kennedy, G0FCU, Copyright 2015,2016,2017
 # v1.1 8th Nov 2015 - updated to also allow Meteor-M-N1 recording
 # v1.2 1st Jan 2016 - updated to add active satellites flags
+# v1.3 9th April 2017 - fixed bug that prevented termination of the gnuradioscript
 import socket
 import sys
 import time
@@ -204,7 +205,7 @@ while forever:
         print "Kill rx program"
         if rxprogramrunning == 1:
             for process in psutil.process_iter():
-                if process.cmdline == ['python', runningcmd]:
+                if process.cmdline() == ['python', runningcmd]:
                    print('Process found. Terminating it.')
                    process.terminate()
                    if POSTCMD1 != "":
