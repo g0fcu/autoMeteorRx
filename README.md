@@ -107,3 +107,6 @@ Terminated
 Current time: 1430759755
 Next AOS/LOS: 1430764959
 Last AOS: 1430764959  Sleep 60 seconds...
+
+
+Copyright 2015,2016,2017 Simon Kennedy, G0FCU, g0fcu at g0fcu.com
